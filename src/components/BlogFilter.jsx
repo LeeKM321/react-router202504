@@ -16,6 +16,22 @@ const BlogFilter = () => {
     });
   };
 
+  // 정렬 이벤트
+  const handleSortChange = (e) => {
+    setSearchParams((prev) => {
+      prev.set('sort', e.target.value);
+      return prev;
+    });
+  };
+
+  // 검색 이벤트
+  const handleSearch = (e) => {
+    setSearchParams((prev) => {
+      prev.set('search', e.target.value);
+      return prev;
+    });
+  };
+
   return (
     <div className={styles.filter}>
       <select onChange={handleCategoryChange}>
@@ -26,12 +42,16 @@ const BlogFilter = () => {
         ))}
       </select>
 
-      <select>
+      <select onChange={handleSortChange}>
         <option value='latest'>최신순</option>
         <option value='oldest'>오래된순</option>
       </select>
 
-      <input type='text' placeholder='검색어를 입력하세요' />
+      <input
+        type='text'
+        placeholder='검색어를 입력하세요'
+        onChange={handleSearch}
+      />
     </div>
   );
 };

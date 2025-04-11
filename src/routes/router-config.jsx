@@ -3,12 +3,14 @@ import IndexPage from '../pages/IndexPage';
 import BlogPage from '../pages/BlogPage';
 import AboutPage from '../pages/AboutPage';
 import RootLayout from '../layouts/RootLayout';
+import ErrorPage from '../pages/ErrorPage';
 
 // 라우터 설정
 export const router = createBrowserRouter([
   {
     path: '/',
     element: <RootLayout />,
+    errorElement: <ErrorPage />,
     children: [
       {
         index: true, // 부모 경로가 활성화 되었을 때 기본으로 사용할 컴포넌트
@@ -19,7 +21,7 @@ export const router = createBrowserRouter([
         element: <BlogPage />,
       },
       {
-        path: 'about',
+        path: 'about2',
         element: <AboutPage />,
       },
     ],

@@ -4,7 +4,6 @@ import MainNav from '../components/MainNav';
 const AboutPage = () => {
   return (
     <>
-      <MainNav />
       <h1>About Page 입니다.</h1>
     </>
   );

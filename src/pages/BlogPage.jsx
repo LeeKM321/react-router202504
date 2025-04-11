@@ -2,6 +2,7 @@ import PostCard from '../components/PostCard';
 import styles from './BlogPage.module.scss';
 import { posts } from '../assets/dummy-data';
 import { useSearchParams } from 'react-router-dom';
+import BlogFilter from '../components/BlogFilter';
 
 const BlogPage = () => {
   // ?뒤에 값(쿼리스트링) 읽는법
@@ -18,6 +19,7 @@ const BlogPage = () => {
 
   return (
     <div className={styles.blog}>
+      <BlogFilter />
       <div className={styles.grid}>
         {posts
           .filter((post) => category === 'all' || post.category === category)

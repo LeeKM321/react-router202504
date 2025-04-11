@@ -1,0 +1,37 @@
+.filter {
+  margin-bottom: 2rem;
+  padding: 1rem;
+  background-color: #f5f5f5;
+  border-radius: 8px;
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  flex-wrap: wrap;
+
+  select {
+    width: 120px; // 너비 고정
+    min-width: 120px; // 최소 너비 설정
+    padding: 0.5rem;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    background-color: white;
+
+    &:focus {
+      outline: none;
+      border-color: #0066cc;
+    }
+  }
+
+  input {
+    padding: 0.5rem;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    flex: 1;
+    min-width: 200px;
+
+    &:focus {
+      outline: none;
+      border-color: #0066cc;
+    }
+  }
+}
